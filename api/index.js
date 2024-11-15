@@ -5,7 +5,7 @@ const connectDB = require('../db'); // Assuming this file is in a separate folde
 const app = express();
 const port = process.env.PORT || 5000; // Use environment variable for port
 
-const Quiz = require('..model/'); // Assuming you have a Quiz model defined in models/quiz.js
+const Quiz = require('../model'); // Assuming you have a Quiz model defined in models/quiz.js
 
 // Connect to MongoDB
 connectDB();
