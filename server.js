@@ -10,12 +10,7 @@ const Quiz = require('./model'); // Assuming you have a Quiz model defined in mo
 // Connect to MongoDB
 connectDB();
 
-app.use(cors({
-    origin: 'http://quizk.app', // Allow only this domain to make requests
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
-    credentials: true, // Allow credentials
-})); // Enable CORS
+app.use(cors());
 
 // Define API endpoints (assuming you have a quiz model)
 app.get('/api/quizzes', async (req, res) => {
