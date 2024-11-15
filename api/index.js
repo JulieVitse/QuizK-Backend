@@ -12,6 +12,7 @@ connectDB();
 
 app.use(cors());
 
+app.get('/', (req, res) => { res.send('Express on Vercel') });
 // Define API endpoints (assuming you have a quiz model)
 app.get('/api/quizzes', async (req, res) => {
     try {
@@ -24,5 +25,6 @@ app.get('/api/quizzes', async (req, res) => {
     }
 });
 
+module.exports = app;
 // Start the server
 app.listen(port, () => console.log(`Server listening on port ${port}`));
