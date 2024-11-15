@@ -19,6 +19,7 @@ app.get('/api/quizzes', async (req, res) => {
         res.json(quizzes);
     } catch (err) {
         console.error(err.message);
+        console.log("not working" + err.message);
         res.status(500).send('Server Error');
     }
 });
