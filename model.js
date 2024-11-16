@@ -13,9 +13,10 @@ const QuizSchema = new mongoose.Schema({
     title: String,
     questionCount: Number,
     description: String,
+    extraDescription: String,
     questions: [QuestionSchema],
 });
 
-const Quiz = mongoose.model('Quiz', QuizSchema);
+const Quizzes = mongoose.model('Quizzes', QuizSchema, 'Quizzes');
 
-module.exports = Quiz;
+module.exports = Quizzes;
