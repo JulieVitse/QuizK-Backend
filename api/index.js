@@ -22,6 +22,19 @@ app.get('/api/quizzes', async (req, res) => {
     }
 });
 
+app.get('/api/quizzes/:id', async (req, res) => {
+    try {
+        const quiz = await Quizzes.findById(req.params.id); // Fetch a quiz by ID
+        if (!quiz) {
+            return res.status(404).json({ msg: 'Quiz not found' });
+        }
+        res.json(quiz);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server Error');
+    }
+});
+
 // Start the server
 
 app.listen(port, async () => {
