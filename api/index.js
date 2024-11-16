@@ -8,19 +8,8 @@ const port = process.env.PORT || 5000; // Use environment variable for port
 const Quizzes = require('../model'); // Assuming you have a Quiz model defined in models/quiz.js
 
 app.use(cors(
-    {
-        origin: 'http://localhost:5173',
-        credentials: true
-    }
-    
+ 
 ));
-
-app.use((req, res, next) => {
-       res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173'); // Allow requests from your frontend's origin
-       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Specify allowed HTTP methods
-       res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Specify allowed headers
-       next();
-     });
 
 app.get('/', (req, res) => { res.send('QuizK Quiz API') });
 
