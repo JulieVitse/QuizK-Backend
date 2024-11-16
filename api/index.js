@@ -38,15 +38,14 @@ app.get('/api/quizzes/:id', async (req, res) => {
 });
 
 // Start the server
+connectDB(); // Connect to MongoDB
 
 app.listen(port, async () => {
-    try {
-        await connectDB();
+
+        
     console.log(`Server listening on port ${port}`);
 
-    } catch (err) {
-        console.error(err.message);
-    }
+   
 });
 
 module.exports = app;
