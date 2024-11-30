@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000; // Use environment variable for port
 
 const Quizzes = require('../model'); // Assuming you have a Quiz model defined in models/quiz.js
-const UserQuizzes = require('../model'); // Assuming you have a UserQuiz model defined in models/userQuiz.js
+//const UserQuizzes = require('../model'); // Assuming you have a UserQuiz model defined in models/userQuiz.js
 
 app.use(express.json());
 app.use(cors({
@@ -43,7 +43,7 @@ app.get('/api/quizzes/:id', async (req, res) => {
 
 /**************************USER SUBMITS  *********************************/
 
-app.post('/api/user-quizzes', async (req, res, next) => {
+/* app.post('/api/user-quizzes', async (req, res, next) => {
     console.log('Received POST request:', req.body);
     const { title, theme, questionCount, description, extraDescription, questions, username } = req.body;
     const userQuiz = new UserQuizzes({
@@ -87,7 +87,7 @@ app.get('/api/user-quizzes/:id', async (req, res, next) => {
         console.error(error);
         res.status(500).json({ message: 'Error fetching user quiz' });
     }
-});
+}); */
 
 
 // Start the server

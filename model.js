@@ -19,7 +19,7 @@ const QuizSchema = new mongoose.Schema({
 });
 
 
-const UserQuestionSchema = new mongoose.Schema({
+/* const UserQuestionSchema = new mongoose.Schema({
     number: Number,
     category: String,
     question: String,
@@ -36,10 +36,10 @@ const UserQuizSchema = new mongoose.Schema({
     extraDescription: String,
     questions: [UserQuestionSchema],
     username: String,
-});
+}); */
 
 const Quizzes = mongoose.model('Quizzes', QuizSchema, 'Quizzes');
-const UserQuizzes = mongoose.model('UserQuizzes', UserQuizSchema, 'UserQuizzes');
+//const UserQuizzes = mongoose.model('UserQuizzes', UserQuizSchema, 'UserQuizzes');
 
 module.exports = Quizzes;
-module.exports = UserQuizzes;
+//module.exports = UserQuizzes;
