@@ -16,6 +16,6 @@
   "scripts": {
     "dev:server": "nodemon ./server.js",
     "populate-db": "node ./populateDatabase.js",
-    "server": "node ./server.js"
+    "server": "node api/index.js"
   }
 }
