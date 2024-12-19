@@ -9,7 +9,7 @@ const UserQuestionSchema = new mongoose.Schema({
 });
 
 const UserQuizSchema = new mongoose.Schema({
-    id: mongoose.Schema.Types.ObjectId,
+    id: Number,
     title: String,
     theme: String,
     questionCount: Number,
