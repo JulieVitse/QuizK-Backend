@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors({
     origin: '*',
     methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization,Access-Control-Allow-Private-Network',
+    allowedHeaders: 'Content-Type,Authorization,Access-Control-Allow-Private-Network, Access-Control-Allow-*',
     credentials: true,
     optionsSuccessStatus: 200,
 }));
