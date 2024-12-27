@@ -9,7 +9,13 @@ const Quizzes = require('../model'); // Assuming you have a Quiz model defined i
 const UserQuizzes = require('../userModel'); // Assuming you have a UserQuiz model defined in models/userQuiz.js
 
 app.use(express.json());
-app.use(cors({}));
+app.use(cors({
+    origin: '*',
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization,Access-Control-Allow-Private-Network',
+    credentials: true,
+    optionsSuccessStatus: 200,
+}));
 
 app.get('/', (req, res) => { res.send('QuizK Quiz API') });
 
