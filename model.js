@@ -10,6 +10,7 @@ const QuestionSchema = new mongoose.Schema({
 
 const QuizSchema = new mongoose.Schema({
     id: Number,
+    _id: mongoose.Schema.Types.ObjectId,
     title: String,
     theme: String,
     questionCount: Number,
